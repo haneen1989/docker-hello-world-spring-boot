@@ -5,8 +5,8 @@ REPOSITORY=docker
 TAG_VERSION=$2
 TOKEN=$1
 
-if test -f "$File"; then
-  echo "$File" exists
+if test -f "$FILE"; then
+  echo "$FILE" exists
   echo "*************Docker image build started************"
   docker build -t $IMAGE_NAME .
   echo "*************Docker image build completed***********"
