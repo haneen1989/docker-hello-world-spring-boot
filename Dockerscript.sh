@@ -9,7 +9,7 @@ AWS_ACCOUNT_ID=499756076901
 if test -f "$FILE"; then
   echo "$FILE" exists
   echo "*************Docker image build started************"
-  docker build -t $IMAGE_NAME .
+  docker build -t $IMAGE_NAME:$TAG_VERSION .
   echo "*************Docker image build completed***********"
   echo "*************Push docker image to docker hub***********"
   docker tag $REPOSITORY:$TAG_VERSION $REGISTRY/$REPOSITORY:$TAG_VERSION
