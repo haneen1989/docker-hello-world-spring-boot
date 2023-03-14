@@ -2,8 +2,7 @@ FILE=Dockerfile
 IMAGE_NAME=imagename
 REGISTRY=499756076901.dkr.ecr.eu-west-3.amazonaws.com
 REPOSITORY=test
-TAG_VERSION=$2
-TOKEN=$1
+TAG_VERSION=$1
 REGION=eu-west-3 
 AWS_ACCOUNT_ID=499756076901
 
