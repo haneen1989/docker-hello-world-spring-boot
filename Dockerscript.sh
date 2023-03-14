@@ -5,6 +5,8 @@ REPOSITORY=test
 TAG_VERSION=$1
 REGION=eu-west-3 
 AWS_ACCOUNT_ID=499756076901
+ACCESS_KEY=$2
+SECRET_ACCESS_KEY=$3
 
 if test -f "$FILE"; then
   echo "$FILE" exists
