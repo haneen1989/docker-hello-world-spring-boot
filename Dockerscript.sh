@@ -14,6 +14,8 @@ if test -f "$FILE"; then
   docker build -t $IMAGE_NAME:$TAG_VERSION .
   echo "*************Docker image build completed***********"
   echo "*************Push docker image to docker hub***********"
+  aws configure set aws_access_key_id $ACCESS_KEY
+  aws configure set aws_secret_access_key $SECRET_ACCESS_KEY
   docker tag $IMAGE_NAME:$TAG_VERSION $REGISTRY/$REPOSITORY:$TAG_VERSION
   aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
   docker push $REGISTRY/$REPOSITORY:$TAG_VERSION
