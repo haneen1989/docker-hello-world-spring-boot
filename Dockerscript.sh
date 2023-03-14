@@ -4,7 +4,7 @@ REGISTRY=499756076901.dkr.ecr.eu-west-3.amazonaws.com
 REPOSITORY=test
 TAG_VERSION=$2
 TOKEN=$1
-REGIION=eu-west-3 
+REGION=eu-west-3 
 AWS_ACCOUNT_ID=499756076901
 
 if test -f "$FILE"; then
